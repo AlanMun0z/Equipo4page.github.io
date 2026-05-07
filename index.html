@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No estás sola</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        /* 🌸 MODO CLARO (ROSA) */
+        .claro {
+            background: #ffe4ec;
+            color: #111;
+        }
+
+        /* 💙 MODO OSCURO (AZUL) */
+        .oscuro {
+            background: #001f3f;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            padding: 15px;
+            margin: 15px;
+            border-radius: 12px;
+            width: 80%;
+        }
+
+        /* Cards en claro */
+        .claro .card {
+            background: #fff0f5;
+        }
+
+        /* Cards en oscuro */
+        .oscuro .card {
+            background: rgba(255,255,255,0.1);
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #ff4d6d;
+            color: white;
+        }
+
+        /* Botones en oscuro */
+        .oscuro button {
+            background: #0077ff;
+        }
+
+        /* Marquesina */
+        #marquesina {
+            padding: 10px;
+            color: white;
+        }
+
+        .claro #marquesina {
+            background: #ff4d6d; /* rosa */
+        }
+
+        .oscuro #marquesina {
+            background: #0077ff; /* azul */
+        }
+
+        .galeria img {
+            width: 120px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+        }
+    </style>
+</head>
+
+<body class="claro">
+
+<header>
+    <h1>No estás sola</h1>
+    <p>Información, apoyo y conciencia</p>
+
+    <button onclick="cambiarTema()">🌗 Cambiar tema</button>
+    <button onclick="window.location.href='mitos.html'">💜 Mitos vs Realidad</button>
+</header>
+
+<div id="marquesina">
+    🤍 No estás sola, hablar es el primer paso 🤍
+</div>
+
+<main>
+
+    <section class="card">
+        <h2>Concientización</h2>
+        <p>La violencia de género sigue afectando a millones de personas.</p>
+    </section>
+
+    <section class="card">
+        <h2>Consejos</h2>
+        <button onclick="mostrarConsejo()">💬 Mostrar consejo</button>
+        <p id="consejo"></p>
+    </section>
+
+    <section class="card">
+        <h2>Mini Quiz</h2>
+        <p>¿Qué debes hacer si alguien está en peligro?</p>
+
+        <button onclick="quiz(true)">Buscar ayuda</button>
+        <button onclick="quiz(false)">Ignorar</button>
+
+        <p id="resultadoQuiz"></p>
+    </section>
+
+    <section class="card">
+        <h2>Galería</h2>
+        <div class="galeria">
+            <img src="img1.jpg" onclick="abrirModal(this)">
+            <img src="img2.jpg" onclick="abrirModal(this)">
+            <img src="img3.jpg" onclick="abrirModal(this)">
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="cerrarModal()">
+        <img id="imgModal">
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 No estás sola</p>
+</footer>
+
+<script>
+function cambiarTema() {
+    let body = document.body;
+    body.classList.toggle("oscuro");
+    body.classList.toggle("claro");
+}
+
+function mostrarConsejo() {
+    let consejos = [
+        "Escuchar sin juzgar puede salvar vidas.",
+        "Buscar ayuda es un acto de valentía.",
+        "No estás sola.",
+        "Hablar es el primer paso."
+    ];
+
+    let random = Math.floor(Math.random() * consejos.length);
+    document.getElementById("consejo").innerText = consejos[random];
+}
+
+function quiz(respuesta) {
+    let resultado = document.getElementById("resultadoQuiz");
+
+    if (respuesta) {
+        resultado.innerText = "✔ Correcto";
+    } else {
+        resultado.innerText = "❌ Incorrecto";
+    }
+}
+
+function abrirModal(img) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("imgModal").src = img.src;
+}
+
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+</html>

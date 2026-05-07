@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitos vs Realidad</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* 🌸 MODO CLARO (ROSA) */
+.claro {
+    background: #ffe4ec;
+    color: #111;
+}
+
+/* 💙 MODO OSCURO (AZUL) */
+.oscuro {
+    background: #001f3f;
+    color: white;
+}
+
+.card {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+}
+
+/* Cards */
+.claro .card {
+    background: #fff0f5;
+}
+
+.oscuro .card {
+    background: rgba(255,255,255,0.1);
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ff4d6d;
+    color: white;
+}
+
+/* Botones en oscuro */
+.oscuro button {
+    background: #0077ff;
+}
+
+/* Texto oculto */
+.realidad {
+    display: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body class="claro">
+
+<header>
+    <h1>Mitos vs Realidad</h1>
+    <p>Identifica diferentes tipos de violencia</p>
+
+    <button onclick="cambiarTema()">🌗 Cambiar tema</button>
+    <button onclick="window.location.href='index.html'">⬅ Volver</button>
+</header>
+
+<!-- MITOS -->
+
+<div class="card">
+    <p>❌ “Si no hay golpes, no es violencia”</p>
+    <button onclick="mostrar(0)">Ver realidad</button>
+    <p class="realidad">✔ La violencia también puede ser emocional, psicológica o verbal.</p>
+</div>
+
+<div class="card">
+    <p>❌ “Los celos son una forma de amor”</p>
+    <button onclick="mostrar(1)">Ver realidad</button>
+    <p class="realidad">✔ Los celos excesivos son control, no amor.</p>
+</div>
+
+<div class="card">
+    <p>❌ “Solo ocurre en relaciones adultas”</p>
+    <button onclick="mostrar(2)">Ver realidad</button>
+    <p class="realidad">✔ La violencia puede presentarse a cualquier edad.</p>
+</div>
+
+<div class="card">
+    <p>❌ “Es normal revisar el celular de tu pareja”</p>
+    <button onclick="mostrar(3)">Ver realidad</button>
+    <p class="realidad">✔ Invadir la privacidad es una señal de control.</p>
+</div>
+
+<script>
+
+/* CAMBIO DE TEMA */
+function cambiarTema() {
+    let body = document.body;
+    body.classList.toggle("oscuro");
+    body.classList.toggle("claro");
+}
+
+/* MOSTRAR REALIDAD */
+function mostrar(i) {
+    let r = document.querySelectorAll(".realidad");
+
+    if (r[i].style.display === "block") {
+        r[i].style.display = "none";
+    } else {
+        r[i].style.display = "block";
+    }
+}
+
+</script>
+
+</body>
+</html>
