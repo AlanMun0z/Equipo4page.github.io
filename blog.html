@@ -51,6 +51,7 @@ header p{
     text-decoration:none;
     font-weight:bold;
     transition:0.3s;
+    cursor:pointer;
 }
 
 .btn:hover{
@@ -100,6 +101,13 @@ main{
     margin-bottom:15px;
 }
 
+/* EXTRA CONTENT */
+
+.extra{
+    display:none;
+    margin-top:10px;
+}
+
 /* FOOTER */
 
 footer{
@@ -130,12 +138,9 @@ footer{
 <main>
 
     <!-- POST 1 -->
-
     <article class="blog-post">
 
-        <img 
-        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
-        class="blog-img">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" class="blog-img">
 
         <div class="blog-content">
 
@@ -147,23 +152,34 @@ footer{
                 o participar en decisiones importantes.
             </p>
 
-            <p>
-                Gracias a movimientos sociales y mujeres que lucharon por la igualdad,
-                hoy existen más oportunidades en la educación, el trabajo y la política.
-                Sin embargo, aún quedan desafíos importantes por enfrentar.
-            </p>
+            <button class="btn" onclick="toggle(this)">Ver más</button>
+
+            <div class="extra">
+                <p>
+                    La lucha por los derechos de las mujeres comenzó a tomar fuerza en los siglos XIX y XX con movimientos sufragistas en distintos países.
+                </p>
+
+                <p>
+                    El derecho al voto femenino fue uno de los primeros grandes logros, pero no llegó al mismo tiempo en todo el mundo.
+                </p>
+
+                <p>
+                    Con el tiempo, las mujeres lograron acceso a educación superior, empleos profesionales y participación política, aunque aún con desigualdades.
+                </p>
+
+                <p>
+                    Actualmente siguen existiendo retos como la brecha salarial, violencia de género y desigualdad en puestos de liderazgo.
+                </p>
+            </div>
 
         </div>
 
     </article>
 
     <!-- POST 2 -->
-
     <article class="blog-post">
 
-        <img 
-        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
-        class="blog-img">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" class="blog-img">
 
         <div class="blog-content">
 
@@ -174,23 +190,34 @@ footer{
                 pequeños, pero que siguen fomentando desigualdades entre hombres y mujeres.
             </p>
 
-            <p>
-                Muchas veces pasan desapercibidos porque forman parte de hábitos
-                normalizados dentro de la sociedad. Reconocerlos es un paso importante
-                para crear relaciones más respetuosas e igualitarias.
-            </p>
+            <button class="btn" onclick="toggle(this)">Ver más</button>
+
+            <div class="extra">
+                <p>
+                    Son comportamientos sutiles como interrumpir a una mujer al hablar, asumir roles de género o minimizar opiniones.
+                </p>
+
+                <p>
+                    También aparecen en publicidad, redes sociales y educación, reforzando estereotipos tradicionales.
+                </p>
+
+                <p>
+                    Aunque parecen inofensivos, acumulados generan desigualdad social real y afectan la autoestima y oportunidades.
+                </p>
+
+                <p>
+                    Identificarlos es clave para cambiarlos y construir relaciones más respetuosas.
+                </p>
+            </div>
 
         </div>
 
     </article>
 
     <!-- POST 3 -->
-
     <article class="blog-post">
 
-        <img 
-        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
-        class="blog-img">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" class="blog-img">
 
         <div class="blog-content">
 
@@ -201,10 +228,25 @@ footer{
                 respeto e igualdad. Pequeñas acciones pueden hacer una gran diferencia.
             </p>
 
-            <p>
-                Escuchar opiniones, evitar estereotipos y tratar a todas las personas
-                con respeto ayuda a crear ambientes más seguros e inclusivos para todos.
-            </p>
+            <button class="btn" onclick="toggle(this)">Ver más</button>
+
+            <div class="extra">
+                <p>
+                    Promover la igualdad en la escuela empieza con el respeto entre compañeros y la eliminación de estereotipos.
+                </p>
+
+                <p>
+                    Es importante escuchar todas las opiniones sin importar género y fomentar la participación equitativa.
+                </p>
+
+                <p>
+                    Los docentes también juegan un papel clave al evitar sesgos y promover ambientes seguros.
+                </p>
+
+                <p>
+                    Estos cambios ayudan a formar generaciones más conscientes y respetuosas.
+                </p>
+            </div>
 
         </div>
 
@@ -215,6 +257,20 @@ footer{
 <footer>
     <p>© 2026 No estás sola</p>
 </footer>
+
+<script>
+function toggle(btn){
+    let extra = btn.nextElementSibling;
+
+    if(extra.style.display === "block"){
+        extra.style.display = "none";
+        btn.innerText = "Ver más";
+    }else{
+        extra.style.display = "block";
+        btn.innerText = "Ver menos";
+    }
+}
+</script>
 
 </body>
 </html>
