@@ -16,7 +16,7 @@
 
 body{
     font-family: Arial, sans-serif;
-    background: #ffe4ec;
+    background:#ffe4ec;
     color:#222;
 }
 
@@ -31,31 +31,20 @@ header{
 
 header h1{
     font-size:50px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:18px;
-    opacity:0.9;
 }
 
 /* BOTON */
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 20px;
+    margin-top:15px;
+    padding:10px 18px;
     background:white;
     color:#ff4d6d;
     border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+    border:none;
     cursor:pointer;
-}
-
-.btn:hover{
-    transform:scale(1.05);
+    font-weight:bold;
 }
 
 /* BLOG */
@@ -69,53 +58,67 @@ main{
 
 .blog-post{
     background:white;
-    margin-bottom:35px;
-    border-radius:18px;
+    margin-bottom:30px;
+    border-radius:16px;
     overflow:hidden;
     box-shadow:0 6px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
 }
 
-.blog-post:hover{
-    transform:translateY(-5px);
-}
-
-.blog-img{
+.blog-post img{
     width:100%;
-    height:260px;
+    height:240px;
     object-fit:cover;
 }
 
 .blog-content{
-    padding:25px;
+    padding:20px;
 }
 
 .blog-content h2{
     color:#ff4d6d;
-    margin-bottom:15px;
-    font-size:30px;
+    margin-bottom:10px;
 }
 
-.blog-content p{
-    line-height:1.8;
-    margin-bottom:15px;
-}
+/* MODAL */
 
-/* EXTRA CONTENT */
-
-.extra{
+.modal{
     display:none;
-    margin-top:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
-/* FOOTER */
+.modal-content{
+    background:white;
+    max-width:750px;
+    width:100%;
+    padding:25px;
+    border-radius:12px;
+    max-height:85vh;
+    overflow-y:auto;
+}
 
-footer{
-    background:#ff4d6d;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.modal-content h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.modal-content p{
+    line-height:1.7;
+    margin-bottom:12px;
 }
 
 </style>
@@ -124,152 +127,123 @@ footer{
 <body>
 
 <header>
-    <h1>📰 Nuestro Blog</h1>
-
-    <p>
-        Un espacio para informar, reflexionar y apoyar la igualdad de género.
-    </p>
-
-    <a href="index.html" class="btn">
-        ⬅ Volver al inicio
-    </a>
+    <h1>📰 Blog</h1>
+    <p>Artículos completos sobre igualdad y conciencia social</p>
 </header>
 
 <main>
 
     <!-- POST 1 -->
-    <article class="blog-post">
-
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" class="blog-img">
+    <div class="blog-post">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
 
         <div class="blog-content">
+            <h2>Derechos de las mujeres</h2>
+            <p>Historia de la lucha por la igualdad y los avances sociales.</p>
 
-            <h2>La evolución de los derechos de las mujeres</h2>
-
-            <p>
-                Durante siglos, las mujeres tuvieron menos derechos y oportunidades
-                que los hombres. Muchas no podían votar, estudiar ciertas carreras
-                o participar en decisiones importantes.
-            </p>
-
-            <button class="btn" onclick="toggle(this)">Ver más</button>
-
-            <div class="extra">
-                <p>
-                    La lucha por los derechos de las mujeres comenzó a tomar fuerza en los siglos XIX y XX con movimientos sufragistas en distintos países.
-                </p>
-
-                <p>
-                    El derecho al voto femenino fue uno de los primeros grandes logros, pero no llegó al mismo tiempo en todo el mundo.
-                </p>
-
-                <p>
-                    Con el tiempo, las mujeres lograron acceso a educación superior, empleos profesionales y participación política, aunque aún con desigualdades.
-                </p>
-
-                <p>
-                    Actualmente siguen existiendo retos como la brecha salarial, violencia de género y desigualdad en puestos de liderazgo.
-                </p>
-            </div>
-
+            <button class="btn" onclick="openModal('m1')">Ver artículo completo</button>
         </div>
-
-    </article>
+    </div>
 
     <!-- POST 2 -->
-    <article class="blog-post">
-
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" class="blog-img">
+    <div class="blog-post">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
 
         <div class="blog-content">
+            <h2>Micromachismos</h2>
+            <p>Comportamientos invisibles que generan desigualdad.</p>
 
-            <h2>Micromachismos: hábitos de desigualdad normalizados</h2>
-
-            <p>
-                Los micromachismos son actitudes o comentarios cotidianos que parecen
-                pequeños, pero que siguen fomentando desigualdades entre hombres y mujeres.
-            </p>
-
-            <button class="btn" onclick="toggle(this)">Ver más</button>
-
-            <div class="extra">
-                <p>
-                    Son comportamientos sutiles como interrumpir a una mujer al hablar, asumir roles de género o minimizar opiniones.
-                </p>
-
-                <p>
-                    También aparecen en publicidad, redes sociales y educación, reforzando estereotipos tradicionales.
-                </p>
-
-                <p>
-                    Aunque parecen inofensivos, acumulados generan desigualdad social real y afectan la autoestima y oportunidades.
-                </p>
-
-                <p>
-                    Identificarlos es clave para cambiarlos y construir relaciones más respetuosas.
-                </p>
-            </div>
-
+            <button class="btn" onclick="openModal('m2')">Ver artículo completo</button>
         </div>
-
-    </article>
+    </div>
 
     <!-- POST 3 -->
-    <article class="blog-post">
-
-        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" class="blog-img">
+    <div class="blog-post">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
 
         <div class="blog-content">
+            <h2>Igualdad en la escuela</h2>
+            <p>Cómo crear espacios más justos desde la educación.</p>
 
-            <h2>Cómo apoyar la igualdad de género desde la escuela</h2>
-
-            <p>
-                La escuela es uno de los espacios más importantes para aprender
-                respeto e igualdad. Pequeñas acciones pueden hacer una gran diferencia.
-            </p>
-
-            <button class="btn" onclick="toggle(this)">Ver más</button>
-
-            <div class="extra">
-                <p>
-                    Promover la igualdad en la escuela empieza con el respeto entre compañeros y la eliminación de estereotipos.
-                </p>
-
-                <p>
-                    Es importante escuchar todas las opiniones sin importar género y fomentar la participación equitativa.
-                </p>
-
-                <p>
-                    Los docentes también juegan un papel clave al evitar sesgos y promover ambientes seguros.
-                </p>
-
-                <p>
-                    Estos cambios ayudan a formar generaciones más conscientes y respetuosas.
-                </p>
-            </div>
-
+            <button class="btn" onclick="openModal('m3')">Ver artículo completo</button>
         </div>
-
-    </article>
+    </div>
 
 </main>
 
-<footer>
-    <p>© 2026 No estás sola</p>
-</footer>
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(event)">✖</span>
+        <div id="modalText"></div>
+    </div>
+</div>
 
 <script>
-function toggle(btn){
-    let extra = btn.nextElementSibling;
 
-    if(extra.style.display === "block"){
-        extra.style.display = "none";
-        btn.innerText = "Ver más";
-    }else{
-        extra.style.display = "block";
-        btn.innerText = "Ver menos";
+function openModal(id){
+
+    let content = {
+
+        m1: `
+            <h2>Derechos de las mujeres</h2>
+
+            <p>La historia de los derechos de las mujeres es una de las luchas sociales más importantes de la humanidad. Durante siglos, las mujeres fueron excluidas de la educación, del voto y de la participación política.</p>
+
+            <p>En muchas sociedades se esperaba que su único rol fuera el hogar, lo que limitaba completamente sus oportunidades de desarrollo personal y profesional.</p>
+
+            <p>Con el surgimiento de los movimientos sufragistas en el siglo XIX y XX, las mujeres comenzaron a organizarse para exigir igualdad de derechos, especialmente el derecho al voto.</p>
+
+            <p>Este proceso fue diferente en cada país, pero poco a poco se lograron avances importantes como el acceso a la educación superior y a trabajos profesionales.</p>
+
+            <p>Aunque hoy existen leyes de igualdad, todavía persisten problemas como la brecha salarial, la violencia de género y la desigualdad en puestos de poder.</p>
+
+            <p>La lucha continúa, buscando no solo igualdad legal, sino igualdad real en la vida diaria.</p>
+        `,
+
+        m2: `
+            <h2>Micromachismos</h2>
+
+            <p>Los micromachismos son pequeñas acciones, comentarios o actitudes cotidianas que refuerzan desigualdades de género de forma sutil.</p>
+
+            <p>Aunque muchas veces no son intencionales, tienen un impacto acumulativo en la forma en que se percibe y trata a las mujeres.</p>
+
+            <p>Ejemplos comunes incluyen interrumpir constantemente a una mujer, minimizar sus opiniones o asumir que ciertas tareas le corresponden por su género.</p>
+
+            <p>También aparecen en la publicidad, donde se refuerzan estereotipos tradicionales como mujeres en roles domésticos y hombres en posiciones de autoridad.</p>
+
+            <p>El problema es que estos comportamientos se normalizan y pasan desapercibidos, lo que dificulta su identificación y cambio.</p>
+
+            <p>Reconocerlos es clave para construir relaciones más justas, basadas en el respeto y la igualdad.</p>
+        `,
+
+        m3: `
+            <h2>Igualdad en la escuela</h2>
+
+            <p>La escuela es un espacio clave para la formación de valores como el respeto, la igualdad y la convivencia.</p>
+
+            <p>No solo se aprenden materias académicas, sino también formas de relacionarse con los demás y entender el mundo.</p>
+
+            <p>Promover la igualdad en la escuela significa eliminar estereotipos, fomentar la participación equitativa y asegurar que todas las voces sean escuchadas.</p>
+
+            <p>Los docentes tienen un papel importante al evitar sesgos inconscientes y promover un ambiente inclusivo para todos los estudiantes.</p>
+
+            <p>Actividades colaborativas y espacios de diálogo ayudan a construir una comunidad más justa dentro del aula.</p>
+
+            <p>La educación es una de las herramientas más poderosas para generar cambios sociales a largo plazo.</p>
+        `
+    };
+
+    document.getElementById("modalText").innerHTML = content[id];
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(e){
+    if(e.target.classList.contains("modal") || e.target.classList.contains("close")){
+        document.getElementById("modal").style.display = "none";
     }
 }
+
 </script>
 
 </body>
