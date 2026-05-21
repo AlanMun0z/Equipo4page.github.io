@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog | No estás sola</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #ffe4ec;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(135deg,#ff4d6d,#ff8fab);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* BOTON */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 20px;
+    background:white;
+    color:#ff4d6d;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* BLOG */
+
+main{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.blog-post{
+    background:white;
+    margin-bottom:35px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.blog-post:hover{
+    transform:translateY(-5px);
+}
+
+.blog-img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.blog-content p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#ff4d6d;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📰 Nuestro Blog</h1>
+
+    <p>
+        Un espacio para informar, reflexionar y apoyar la igualdad de género.
+    </p>
+
+    <a href="index.html" class="btn">
+        ⬅ Volver al inicio
+    </a>
+</header>
+
+<main>
+
+    <!-- POST 1 -->
+
+    <article class="blog-post">
+
+        <img 
+        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+        class="blog-img">
+
+        <div class="blog-content">
+
+            <h2>La evolución de los derechos de las mujeres</h2>
+
+            <p>
+                Durante siglos, las mujeres tuvieron menos derechos y oportunidades
+                que los hombres. Muchas no podían votar, estudiar ciertas carreras
+                o participar en decisiones importantes.
+            </p>
+
+            <p>
+                Gracias a movimientos sociales y mujeres que lucharon por la igualdad,
+                hoy existen más oportunidades en la educación, el trabajo y la política.
+                Sin embargo, aún quedan desafíos importantes por enfrentar.
+            </p>
+
+        </div>
+
+    </article>
+
+    <!-- POST 2 -->
+
+    <article class="blog-post">
+
+        <img 
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
+        class="blog-img">
+
+        <div class="blog-content">
+
+            <h2>Micromachismos: hábitos de desigualdad normalizados</h2>
+
+            <p>
+                Los micromachismos son actitudes o comentarios cotidianos que parecen
+                pequeños, pero que siguen fomentando desigualdades entre hombres y mujeres.
+            </p>
+
+            <p>
+                Muchas veces pasan desapercibidos porque forman parte de hábitos
+                normalizados dentro de la sociedad. Reconocerlos es un paso importante
+                para crear relaciones más respetuosas e igualitarias.
+            </p>
+
+        </div>
+
+    </article>
+
+    <!-- POST 3 -->
+
+    <article class="blog-post">
+
+        <img 
+        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+        class="blog-img">
+
+        <div class="blog-content">
+
+            <h2>Cómo apoyar la igualdad de género desde la escuela</h2>
+
+            <p>
+                La escuela es uno de los espacios más importantes para aprender
+                respeto e igualdad. Pequeñas acciones pueden hacer una gran diferencia.
+            </p>
+
+            <p>
+                Escuchar opiniones, evitar estereotipos y tratar a todas las personas
+                con respeto ayuda a crear ambientes más seguros e inclusivos para todos.
+            </p>
+
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+    <p>© 2026 No estás sola</p>
+</footer>
+
+</body>
+</html>
