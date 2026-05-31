@@ -1,4 +1,4 @@
-```html
+```html id="blogfeminismo2026"
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,7 +43,7 @@ header p{
 
 .btn{
     display:inline-block;
-    margin-top:15px;
+    margin-top:18px;
     padding:12px 22px;
     background:white;
     color:#ff4d6d;
@@ -56,7 +56,7 @@ header p{
 }
 
 .btn:hover{
-    background:#ffccd5;
+    background:#ffd6df;
 }
 
 /* MAIN */
@@ -72,31 +72,38 @@ main{
 
 .presentation{
     background:white;
-    padding:30px;
+    padding:35px;
     border-radius:20px;
-    margin-bottom:40px;
+    margin-bottom:45px;
     box-shadow:0 6px 20px rgba(0,0,0,0.1);
-    text-align:center;
 }
 
 .presentation h2{
     color:#ff4d6d;
     margin-bottom:15px;
+    text-align:center;
 }
 
 .presentation p{
-    margin-bottom:20px;
+    text-align:center;
     line-height:1.7;
+    margin-bottom:25px;
 }
 
-/* IFRAME */
+/* PDF */
 
-iframe{
+.pdf-container{
     width:100%;
-    height:600px;
-    border:none;
+    height:700px;
+    overflow:hidden;
     border-radius:16px;
-    margin-top:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.pdf-container iframe{
+    width:100%;
+    height:100%;
+    border:none;
 }
 
 /* BLOG */
@@ -178,11 +185,18 @@ iframe{
 <body>
 
 <header>
+
     <h1>📰 Blog</h1>
-    <p>Artículos completos sobre igualdad y conciencia social</p>
+
+    <p>
+        Artículos completos sobre igualdad, feminismo y conciencia social
+    </p>
 
     <!-- BOTON VOLVER -->
-    <a href="index.html" class="btn">⬅ Volver a la página principal</a>
+    <a href="index.html" class="btn">
+        ⬅ Volver a la página principal
+    </a>
+
 </header>
 
 <main>
@@ -190,68 +204,106 @@ iframe{
     <!-- PRESENTACION -->
     <section class="presentation">
 
-        <h2>📚 Presentación interactiva</h2>
+        <h2>📚 Historia del Feminismo</h2>
 
         <p>
-            Esta presentación explora la historia del feminismo, sus distintas olas,
-            los logros alcanzados, los desafíos persistentes y la importancia de la
+            Esta presentación interactiva explora las diferentes olas del feminismo,
+            sus principales logros, los desafíos persistentes y la importancia de la
             igualdad de género en la sociedad actual.
         </p>
 
-        <!-- CAMBIA EL LINK POR TU EMBED DE CANVA -->
-        <iframe 
-        src="PEGA_AQUI_EL_LINK_EMBED_DE_CANVA">
-        </iframe>
+        <!-- PDF INTERACTIVO -->
+        <div class="pdf-container">
 
-        <a class="btn" 
-        href="PEGA_AQUI_EL_LINK_PUBLICO_DE_CANVA" 
-        target="_blank">
-        Ver presentación completa
-        </a>
+            <!-- CAMBIA "Presentacion.pdf" SI EL NOMBRE DEL PDF ES DIFERENTE -->
+            <iframe src="Presentacion.pdf"></iframe>
+
+        </div>
+
+        <center>
+            <a class="btn" href="Presentacion.pdf" target="_blank">
+                📄 Abrir presentación completa
+            </a>
+        </center>
 
     </section>
 
     <!-- POST 1 -->
     <div class="blog-post">
+
         <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
 
         <div class="blog-content">
+
             <h2>Derechos de las mujeres</h2>
-            <p>Historia de la lucha por la igualdad y los avances sociales.</p>
-            <button class="btn" onclick="openModal('m1')">Ver artículo completo</button>
+
+            <p>
+                Historia de la lucha por la igualdad y los avances sociales.
+            </p>
+
+            <button class="btn" onclick="openModal('m1')">
+                Ver artículo completo
+            </button>
+
         </div>
+
     </div>
 
     <!-- POST 2 -->
     <div class="blog-post">
+
         <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
 
         <div class="blog-content">
+
             <h2>Micromachismos</h2>
-            <p>Comportamientos invisibles que generan desigualdad.</p>
-            <button class="btn" onclick="openModal('m2')">Ver artículo completo</button>
+
+            <p>
+                Comportamientos invisibles que generan desigualdad.
+            </p>
+
+            <button class="btn" onclick="openModal('m2')">
+                Ver artículo completo
+            </button>
+
         </div>
+
     </div>
 
     <!-- POST 3 -->
     <div class="blog-post">
+
         <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
 
         <div class="blog-content">
+
             <h2>Igualdad en la escuela</h2>
-            <p>Cómo crear espacios más justos desde la educación.</p>
-            <button class="btn" onclick="openModal('m3')">Ver artículo completo</button>
+
+            <p>
+                Cómo crear espacios más justos desde la educación.
+            </p>
+
+            <button class="btn" onclick="openModal('m3')">
+                Ver artículo completo
+            </button>
+
         </div>
+
     </div>
 
 </main>
 
 <!-- MODAL -->
 <div id="modal" class="modal" onclick="closeModal(event)">
+
     <div class="modal-content">
+
         <span class="close" onclick="closeModal(event)">✖</span>
+
         <div id="modalText"></div>
+
     </div>
+
 </div>
 
 <script>
@@ -261,60 +313,105 @@ function openModal(id){
 let content = {
 
 m1: `
+
 <h2>Derechos de las mujeres</h2>
 
-<p>Los derechos de las mujeres no siempre han sido reconocidos como hoy. A lo largo de la historia, las mujeres han tenido que luchar para obtener igualdad legal, social y política.</p>
+<p>
+Los derechos de las mujeres no siempre han sido reconocidos como hoy.
+A lo largo de la historia, las mujeres han tenido que luchar para obtener
+igualdad legal, social y política.
+</p>
 
 <img src="img7.jpg">
 
-<p>Durante siglos, las mujeres no tenían derechos básicos como votar o estudiar libremente.</p>
+<p>
+Durante siglos, las mujeres no tenían derechos básicos como votar,
+estudiar libremente o participar en decisiones políticas.
+</p>
 
 <img src="img8.jpg">
 
-<p>Uno de los avances más importantes fue el sufragio femenino y el acceso a la educación.</p>
+<p>
+Uno de los avances más importantes fue el sufragio femenino y el acceso
+a la educación y oportunidades laborales.
+</p>
 
-<p>Actualmente continúan desafíos como la violencia de género y la desigualdad salarial.</p>
+<p>
+Actualmente persisten desafíos como la violencia de género y la
+desigualdad salarial.
+</p>
+
 `,
 
 m2: `
+
 <h2>Micromachismos</h2>
 
-<p>Los micromachismos son comportamientos cotidianos que refuerzan la desigualdad entre hombres y mujeres.</p>
+<p>
+Los micromachismos son comportamientos cotidianos que refuerzan
+la desigualdad entre hombres y mujeres.
+</p>
 
 <img src="img9.jpg">
 
-<p>Muchas veces aparecen en comentarios, actitudes o estereotipos normalizados.</p>
+<p>
+Muchas veces aparecen en comentarios, actitudes o estereotipos
+normalizados dentro de la sociedad.
+</p>
 
 <img src="img10.jpg">
 
-<p>Estos comportamientos afectan la autoestima y limitan oportunidades.</p>
+<p>
+Estos comportamientos pueden afectar la autoestima y limitar
+oportunidades.
+</p>
+
 `,
 
 m3: `
+
 <h2>Igualdad en la escuela</h2>
 
-<p>La educación es fundamental para construir una sociedad más igualitaria.</p>
+<p>
+La educación es uno de los espacios más importantes para construir
+una sociedad más igualitaria.
+</p>
 
 <img src="img11.jpg">
 
-<p>La escuela debe promover respeto, inclusión y oportunidades iguales para todas las personas.</p>
+<p>
+Las escuelas deben promover respeto, inclusión y oportunidades iguales
+para todas las personas.
+</p>
 
 <img src="img12.jpg">
 
-<p>Crear espacios seguros ayuda a formar generaciones más conscientes y justas.</p>
+<p>
+Crear espacios seguros ayuda a formar generaciones más conscientes
+y justas.
+</p>
+
 `
 
 };
 
 document.getElementById("modalText").innerHTML = content[id];
+
 document.getElementById("modal").style.display = "flex";
 
 }
 
 function closeModal(e){
-if(e.target.classList.contains("modal") || e.target.classList.contains("close")){
+
+if(
+e.target.classList.contains("modal") ||
+e.target.classList.contains("close")
+){
+
 document.getElementById("modal").style.display = "none";
+
 }
+
 }
 
 </script>
@@ -322,4 +419,5 @@ document.getElementById("modal").style.display = "none";
 </body>
 </html>
 ```
+
 
