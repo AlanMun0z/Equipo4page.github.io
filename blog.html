@@ -1,4 +1,4 @@
-```html id="blogfeminismo2026"
+```html id="blogfinalcanva"
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -90,20 +90,14 @@ main{
     margin-bottom:25px;
 }
 
-/* PDF */
+/* IFRAME */
 
-.pdf-container{
+.presentation iframe{
     width:100%;
     height:700px;
-    overflow:hidden;
+    border:none;
     border-radius:16px;
     box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-.pdf-container iframe{
-    width:100%;
-    height:100%;
-    border:none;
 }
 
 /* BLOG */
@@ -208,22 +202,26 @@ main{
 
         <p>
             Esta presentación interactiva explora las diferentes olas del feminismo,
-            sus principales logros, los desafíos persistentes y la importancia de la
-            igualdad de género en la sociedad actual.
+            sus logros, desafíos persistentes y la importancia de la igualdad de género.
         </p>
 
-        <!-- PDF INTERACTIVO -->
-        <div class="pdf-container">
-
-            <!-- CAMBIA "Presentacion.pdf" SI EL NOMBRE DEL PDF ES DIFERENTE -->
-            <iframe src="Presentacion.pdf"></iframe>
-
-        </div>
+        <!-- PRESENTACION CANVA -->
+        <iframe 
+        src="https://canva.link/pi8pj1irnbcm9rv"
+        allowfullscreen="allowfullscreen"
+        allow="fullscreen">
+        </iframe>
 
         <center>
-            <a class="btn" href="Presentacion.pdf" target="_blank">
-                📄 Abrir presentación completa
+
+            <a class="btn"
+            href="https://canva.link/pi8pj1irnbcm9rv"
+            target="_blank">
+
+            📄 Abrir presentación completa
+
             </a>
+
         </center>
 
     </section>
@@ -419,5 +417,4 @@ document.getElementById("modal").style.display = "none";
 </body>
 </html>
 ```
-
 
