@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,30 +32,74 @@ header{
 
 header h1{
     font-size:50px;
+    margin-bottom:10px;
 }
 
-/* BOTON */
+header p{
+    font-size:18px;
+}
+
+/* BOTONES */
 
 .btn{
     display:inline-block;
     margin-top:15px;
-    padding:10px 18px;
+    padding:12px 22px;
     background:white;
     color:#ff4d6d;
     border-radius:30px;
     border:none;
     cursor:pointer;
     font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
 }
 
-/* BLOG */
+.btn:hover{
+    background:#ffccd5;
+}
+
+/* MAIN */
 
 main{
     width:90%;
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:40px 0;
 }
+
+/* PRESENTACION */
+
+.presentation{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:40px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.presentation h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.presentation p{
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+/* IFRAME */
+
+iframe{
+    width:100%;
+    height:600px;
+    border:none;
+    border-radius:16px;
+    margin-top:20px;
+}
+
+/* BLOG */
 
 .blog-post{
     background:white;
@@ -135,9 +180,36 @@ main{
 <header>
     <h1>📰 Blog</h1>
     <p>Artículos completos sobre igualdad y conciencia social</p>
+
+    <!-- BOTON VOLVER -->
+    <a href="index.html" class="btn">⬅ Volver a la página principal</a>
 </header>
 
 <main>
+
+    <!-- PRESENTACION -->
+    <section class="presentation">
+
+        <h2>📚 Presentación interactiva</h2>
+
+        <p>
+            Esta presentación explora la historia del feminismo, sus distintas olas,
+            los logros alcanzados, los desafíos persistentes y la importancia de la
+            igualdad de género en la sociedad actual.
+        </p>
+
+        <!-- CAMBIA EL LINK POR TU EMBED DE CANVA -->
+        <iframe 
+        src="PEGA_AQUI_EL_LINK_EMBED_DE_CANVA">
+        </iframe>
+
+        <a class="btn" 
+        href="PEGA_AQUI_EL_LINK_PUBLICO_DE_CANVA" 
+        target="_blank">
+        Ver presentación completa
+        </a>
+
+    </section>
 
     <!-- POST 1 -->
     <div class="blog-post">
@@ -195,51 +267,41 @@ m1: `
 
 <img src="img7.jpg">
 
-<p>Durante siglos, en la mayoría de las sociedades, las mujeres no tenían derechos básicos como votar, estudiar libremente, trabajar sin permiso de un hombre o poseer bienes en igualdad de condiciones.</p>
+<p>Durante siglos, las mujeres no tenían derechos básicos como votar o estudiar libremente.</p>
 
 <img src="img8.jpg">
 
-<p>Uno de los avances más importantes fue el sufragio femenino. Nueva Zelanda fue el primer país en otorgarlo en 1893 y en México las mujeres votaron en 1955.</p>
+<p>Uno de los avances más importantes fue el sufragio femenino y el acceso a la educación.</p>
 
-<p>También hubo avances en educación, trabajo y derechos laborales como la igualdad salarial, aunque aún no se cumple completamente.</p>
-
-<p>Hoy en día persisten retos como la brecha salarial, violencia de género y desigualdad en puestos de poder.</p>
+<p>Actualmente continúan desafíos como la violencia de género y la desigualdad salarial.</p>
 `,
 
 m2: `
 <h2>Micromachismos</h2>
 
-<p>Los micromachismos son comportamientos cotidianos, muchas veces sutiles, que refuerzan la desigualdad entre hombres y mujeres.</p>
+<p>Los micromachismos son comportamientos cotidianos que refuerzan la desigualdad entre hombres y mujeres.</p>
 
 <img src="img9.jpg">
 
-<p>Ejemplos: “los hombres no lloran”, “ayuda a tu mamá en la cocina”, o asumir que ciertas tareas son “de mujeres”.</p>
+<p>Muchas veces aparecen en comentarios, actitudes o estereotipos normalizados.</p>
 
 <img src="img10.jpg">
 
-<p>En la casa: mujeres con más carga doméstica, diferencias en educación de hijos e hijas.</p>
-
-<p>En la escuela: estereotipos como “las niñas son más ordenadas” o interrupciones constantes.</p>
-
-<p>Impacto: baja autoestima, desigualdad normalizada y limitación de oportunidades.</p>
+<p>Estos comportamientos afectan la autoestima y limitan oportunidades.</p>
 `,
 
 m3: `
 <h2>Igualdad en la escuela</h2>
 
-<p>La escuela es uno de los espacios más importantes para construir una sociedad más igualitaria.</p>
+<p>La educación es fundamental para construir una sociedad más igualitaria.</p>
 
 <img src="img11.jpg">
 
-<p>Debe evitar estereotipos como “esto es de niños” o “esto es de niñas” y fomentar participación equitativa.</p>
+<p>La escuela debe promover respeto, inclusión y oportunidades iguales para todas las personas.</p>
 
 <img src="img12.jpg">
 
-<p>Se deben dar las mismas oportunidades de hablar, participar y aprender sin sesgos de género.</p>
-
-<p>También es importante prevenir acoso, promover respeto y mostrar modelos positivos de hombres y mujeres en distintos roles.</p>
-
-<p>La educación ayuda a formar generaciones más conscientes y justas.</p>
+<p>Crear espacios seguros ayuda a formar generaciones más conscientes y justas.</p>
 `
 
 };
@@ -259,3 +321,5 @@ document.getElementById("modal").style.display = "none";
 
 </body>
 </html>
+```
+
